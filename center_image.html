@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>center image</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    </head>
+    <body style="background-color:#cbcbce">
+        <img src="error.png">
+            <script type="text/javascript">
+                <!--
+                var winWidth = 0;
+                var winHeight = 0;
+                function findDimensions()
+                {
+                    if (window.innerWidth)
+                    winWidth = window.innerWidth;
+                    else if ((document.body) && (document.body.clientWidth))
+                    winWidth = document.body.clientWidth;
+                    
+                    if (window.innerHeight)
+                    winHeight = window.innerHeight;
+                    else if ((document.body) && (document.body.clientHeight))
+                    winHeight = document.body.clientHeight;
+                    
+                    if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+                    {
+                        winHeight = document.documentElement.clientHeight;
+                        winWidth = document.documentElement.clientWidth;
+                    }
+                    
+                    var element_list = document.getElementsByTagName('*');
+                    for (var i = 0, max = element_list.length; i < max; i++)
+                    {
+                        var element = element_list[i];
+                        
+                        //image max size
+                        if (element.tagName.toLowerCase() === 'img')
+                        {
+                            //image size
+                            element.style.width = "658";
+                            element.style.height = "334";
+                            //image position
+                            element.style.marginLeft = (winWidth - 658) / 2;
+                            element.style.marginTop = (winHeight - 334) / 2;
+                        }
+                    }
+                }
+            findDimensions();
+            window.onresize=findDimensions;
+            //-->
+                </script>
+    </body>
+</html>
